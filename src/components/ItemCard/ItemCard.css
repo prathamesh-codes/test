@@ -1,0 +1,200 @@
+.brand-whishlist {
+    display: flexbox;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px; /* Space between brand name and wishlist button */
+}
+
+.wishlist-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.item-card {
+    height: 350px; /* Adjust height as needed */
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* overflow: hidden; */
+    display: flexbox;
+  }
+
+  .item-card:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* .item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px 10px 0 0;
+  } */
+
+  .item-image {
+    width: 100%;        /* Ensures the container takes up the full width of the card */
+    height: 200px;      /* Set a fixed height for the image container */
+    overflow: hidden;   /* Hides any overflow if the image is larger */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+
+.item-image img {
+    width: 100%;       /* Makes the image take the full width of its container */
+    height: 100%;      /* Makes the image take the full height of its container */
+    object-fit: cover; /* Ensures the image covers the container, cropping if necessary */
+    border-radius: 8px; /* Optional: Add rounded corners if desired */
+}
+
+  
+  .item-info {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .star {
+    color: #f0c14b;
+    font-size: 16px;
+    margin-right: 2px;
+  }
+  
+  .wishlist-button {
+    border: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .wishlist-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .wishlist-button .heart-icon {
+    font-size: 20px;
+    color: #ccc;
+  }
+  
+  .wishlist-button .heart-icon.filled {
+    color: #f00;
+  }
+  
+  .item-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+  }
+  
+  .item-card-top img {
+      width: 20px;
+      height: 20px;
+  }
+  
+  .item-card-top .rating-count {
+      font-size: 14px;
+      color: #888;
+  }
+.available-sizes{
+    font-size : 0.8rem;
+    color : var(--lighter-color);
+    padding:5px 0px 5px 10px;
+}
+.item-list-mobile-action{
+    display : none;
+}
+.item-action .wishlist-button{
+    background-color: white;
+    border : 1px solid var(--lighter-color); 
+} 
+.item-action .remove-from-wishlist{
+    background-color:#586080 !important ;
+    color : white;
+}
+.item-card-similar-button{
+    position : absolute;
+    top : -25px;
+    right : 5px;
+}
+.view-similar-mobile-button{
+    display : none;
+}
+
+@media screen and (max-width: 1000px){
+    /* .item-card:hover .item-action{
+        display : none;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    } */
+    
+    .item-list-mobile-action{
+        display : block;
+        position : absolute;
+        top : 5px;
+        right : 5px;
+    }
+    .item-list-mobile-action button{
+        height : 25px;
+        width : 25px;
+        border : none;
+        border-radius: 50%;
+        color : rgb(126, 121, 121);
+        font-size : 1.2rem;
+        cursor : pointer;
+        background-color : rgba(221, 199, 199, 0.8);
+        padding-top : 3px;
+    }
+    .heart-remove{
+        color : rgb(238, 42, 42);
+    }
+    .view-similar-mobile-button{
+        display : block;
+        position : absolute;
+        bottom : 9px;
+        right : 5px;
+    }
+    .rating-detail{
+        background-color: rgba(255, 255, 255, 0.85);
+        padding : 2px 3px;
+        font-size: 0.7rem;
+        border-radius :10px;
+    }
+}
+@media screen and (max-width: 480px){
+    .item-card{
+        width : 48%;
+        margin : 2px;
+    }
+    .item-image{
+        height : auto !important;
+        min-height : 150px;
+    }
+    .off{
+        display: none;
+    }
+}
